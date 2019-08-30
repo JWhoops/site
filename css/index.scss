@@ -1,3 +1,39 @@
+body {
+  font-family: "Manjari", sans-serif;
+}
+#face {
+  display: block;
+  // -webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+
+#navbar {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  a {
+    color: #fca103;
+    margin-left: 20px;
+  }
+}
+
+header {
+  text-align: center;
+  #intro {
+    line-height: 35px;
+    font-size: 25px;
+    margin-top: 50px;
+  }
+}
 .flip-card {
   margin: 0 auto;
   margin-top: 100px;
