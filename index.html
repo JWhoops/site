@@ -29,7 +29,33 @@
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <div>front end dev</div>
+          <div id="browser_header">
+            <div id="brower_icon_container">
+              <div style="background-color: red" class="icons"></div>
+              <div style="background-color: grey" class="icons"></div>
+              <div style="background-color: orange" class="icons"></div>
+            </div>
+            <div id="address_input" class="ui labeled input disabled">
+              <div class="ui label">
+                https://
+              </div>
+              <input type="text" placeholder="wwww.jinyuwu.com" />
+            </div>
+          </div>
+          <div
+            id="browser_content"
+            class="ui three column doubling stackable grid container"
+          >
+            <div class="column">
+              <div class="box"></div>
+            </div>
+            <div class="column">
+              <div class="box"></div>
+            </div>
+            <div class="column">
+              <div class="box"></div>
+            </div>
+          </div>
         </div>
         <div class="flip-card-back">
           Backend Development
@@ -37,5 +63,11 @@
       </div>
     </div>
   </body>
+  <!-- Resources -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+  ></script>
   <script src="./JS/index.js"></script>
 </html>

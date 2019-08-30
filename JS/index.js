@@ -1,7 +1,7 @@
-let intro = `<span id="face"> 😄 </span>I'm Josiah Wu<br>
-I go to <span style='color:#c5050c;;'>University of Wisconsin - Madison</span> <br>
+let intro = `<span id="face"> 😄 </span>Josiah Wu<br>
+<span style='color:#c5050c;;'>University of Wisconsin - Madison</span> <br>
 that's right, I am a badger engineer 🦡<br>
-I like:<br> codng, reading,<br> learning, and running.<br>`,
+I like coding, learning, and running.<br>"`,
   i = 0,
   isTag,
   text;
@@ -19,3 +19,4 @@ I like:<br> codng, reading,<br> learning, and running.<br>`,
   if (isTag) return type();
   setTimeout(type, 25);
 })();
+

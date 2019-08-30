@@ -15,6 +15,15 @@ body {
   }
 }
 
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
 #navbar {
   margin-top: 50px;
   text-align: center;
@@ -39,7 +48,7 @@ header #intro {
 
 .flip-card {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 60px;
   background-color: transparent;
   width: 600px;
   height: 600px;
@@ -82,6 +91,86 @@ header #intro {
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
   background: whitesmoke;
+}
+
+.flip-card-front #browser_header #brower_icon_container {
+  height: 20px;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.flip-card-front #browser_header #brower_icon_container .icons {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin-left: 5px;
+  border-radius: 100%;
+}
+
+.flip-card-front #browser_header #address_input {
+  width: 98%;
+}
+
+.flip-card-front #browser_content {
+  margin-top: 20px;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+
+.flip-card-front #browser_content .box {
+  width: 100%;
+  height: 150px;
+  background-color: #fca103;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.flip-card-front #browser_content .box::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  left: -50%;
+  top: -50%;
+  width: 200%;
+  height: 200%;
+  background-color: #399953;
+  background-repeat: no-repeat;
+  background-size: 50% 50%, 50% 50%;
+  background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#399953), to(#399953)), -webkit-gradient(linear, left top, left bottom, from(#fbb300), to(#fbb300)), -webkit-gradient(linear, left top, left bottom, from(#d53e33), to(#d53e33)), -webkit-gradient(linear, left top, left bottom, from(#377af5), to(#377af5));
+  background-image: linear-gradient(#399953, #399953), linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33), linear-gradient(#377af5, #377af5);
+  -webkit-animation: rotate 4s linear infinite;
+          animation: rotate 4s linear infinite;
+}
+
+.flip-card-front #browser_content .box::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 6px;
+  top: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background: white;
+  border-radius: 5px;
 }
 
 /* Style the back side */
