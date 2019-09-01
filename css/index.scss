@@ -152,6 +152,21 @@ header {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: whitesmoke;
+  padding: 20px;
+  background-color: white;
   transform: rotateY(180deg);
+
+  .card {
+    width: 100%;
+    padding-top: 13px;
+    height: 50px;
+    background: whitesmoke;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 20px;
+      vertical-align: text-bottom;
+      margin-left: 8px;
+    }
+  }
 }

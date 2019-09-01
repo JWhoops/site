@@ -132,7 +132,6 @@ header #intro {
           transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 /* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
@@ -178,8 +177,24 @@ header #intro {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: whitesmoke;
+  padding: 20px;
+  background-color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+
+.flip-card-back .card {
+  width: 100%;
+  padding-top: 13px;
+  height: 50px;
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.flip-card-back .card img {
+  width: 20px;
+  height: 20px;
+  vertical-align: text-bottom;
+  margin-left: 8px;
 }
 /*# sourceMappingURL=index.css.map */
