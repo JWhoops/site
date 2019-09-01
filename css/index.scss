@@ -118,6 +118,7 @@ header {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
+  background-color: whitesmoke;
   #browser {
     #browser_header {
       #brower_icon_container {
@@ -152,21 +153,26 @@ header {
 
 /* Style the back side */
 .flip-card-back {
-  padding: 20px;
   background-color: white;
   transform: rotateY(180deg);
-
-  .card {
-    width: 100%;
-    padding-top: 13px;
-    height: 50px;
-    background: whitesmoke;
-    cursor: pointer;
-    img {
-      width: 20px;
-      height: 20px;
-      vertical-align: text-bottom;
-      margin-left: 8px;
+  .column {
+    .card {
+      box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      margin-top: 18px;
+      width: 100%;
+      padding-top: 13px;
+      height: 50px;
+      background: white;
+      cursor: pointer;
+      img {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 10px;
+        vertical-align: text-bottom;
+        margin-left: 8px;
+      }
     }
   }
 }

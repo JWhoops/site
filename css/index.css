@@ -143,6 +143,10 @@ header #intro {
 }
 
 /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: whitesmoke;
+}
+
 .flip-card-front #browser #browser_header #brower_icon_container {
   height: 20px;
   width: 100%;
@@ -177,23 +181,28 @@ header #intro {
 
 /* Style the back side */
 .flip-card-back {
-  padding: 20px;
   background-color: white;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.flip-card-back .card {
+.flip-card-back .column .card {
+  -webkit-box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 18px;
   width: 100%;
   padding-top: 13px;
   height: 50px;
-  background: whitesmoke;
+  background: white;
   cursor: pointer;
 }
 
-.flip-card-back .card img {
+.flip-card-back .column .card img {
+  position: absolute;
   width: 20px;
   height: 20px;
+  left: 10px;
   vertical-align: text-bottom;
   margin-left: 8px;
 }
