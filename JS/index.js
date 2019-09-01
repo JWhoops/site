@@ -1,6 +1,6 @@
 function load_intro() {
   // intro module
-  let emoji = '<span id="face">Hi 😄</span>';
+  let emoji = "Hi 😄<br>";
   let name = "Josiah Wu";
   let intro = `${emoji} I'm ${name} <br>
 University of Wisconsin - Madison <br>
@@ -61,46 +61,12 @@ async function walk_through() {
   rotate_browser();
 
   function skill_list() {
-    browser_front.append(
-      skill_col([
-        skill("HTML", "/"),
-        skill("CSS", "/"),
-        skill("JavaScript", "/"),
-        skill("ES6", "/")
-      ])
-    );
-    browser_front.append(
-      skill_col([
-        skill("Bootstrap", "/"),
-        skill("Semantic UI", "/"),
-        skill("SASS", "/")
-      ])
-    );
-    browser_front.append(
-      skill_col([
-        skill("React", "/"),
-        skill("Redux", "/"),
-        skill("Optimization", "/")
-      ])
-    );
-    browser_back.append(
-      skill_col([
-        skill("Node.js", "/"),
-        skill("Java", "/"),
-        skill("PHP", "/"),
-        skill("Ruby", "/")
-      ])
-    );
-    browser_back.append(
-      skill_col([skill("Express", "/"), skill("Ruby On Rails", "/")])
-    );
-    browser_back.append(
-      skill_col([
-        skill("MongoDB", "/"),
-        skill("MySQL", "/"),
-        skill("SQLite", "/")
-      ])
-    );
+    browser_front.append(skill_col(["HTML", "CSS", "JavaScript", "ES6"]));
+    browser_front.append(skill_col(["Bootstrap", "Semantic UI", "SASS"]));
+    browser_front.append(skill_col(["React", "Redux", "Optimization"]));
+    browser_back.append(skill_col(["Node.js", "Java", "PHP", "Ruby"]));
+    browser_back.append(skill_col(["Express", "Ruby On Rails"]));
+    browser_back.append(skill_col(["MongoDB", "MySQL", "SQLite"]));
   }
 
   // utility function
@@ -147,19 +113,21 @@ function pause(sec) {
 
 function skill_col(skill_cards) {
   let sc = '<div class="column">';
-  sc += skill_cards.join("") + "</div>";
+  sc +=
+    skill_cards
+      .map(n => {
+        return skill(n);
+      })
+      .join("") + "</div>";
   return sc;
 }
 
-function skill(name, link) {
+function skill(name) {
   return `
   <div class="card">
-    <a href="${link}">
       <h3 class="card_title">
         ${name}
-        <img src="./meta/github.svg" alt="icon" />
       </h3>
-    </a>
   </div>
   `;
 }
