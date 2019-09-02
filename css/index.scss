@@ -137,12 +137,9 @@ header {
       }
     }
     #browser_content {
+      border: none;
       height: 600px;
       width: 100%;
-      #browser_page {
-        width: 98.5%;
-        height: 530px;
-      }
     }
   }
 }

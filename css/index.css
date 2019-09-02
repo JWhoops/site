@@ -167,13 +167,9 @@ header #intro {
 }
 
 .flip-card-front #browser #browser_content {
+  border: none;
   height: 600px;
   width: 100%;
-}
-
-.flip-card-front #browser #browser_content #browser_page {
-  width: 98.5%;
-  height: 530px;
 }
 
 /* Style the back side */
