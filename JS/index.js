@@ -45,13 +45,19 @@ async function walk_through() {
   browser_content.attr("src", "https://q835771840.github.io/The-Next-Web/");
   stage.slideDown("slow");
   await pause(1000);
-  await dancing_browser(false, 2);
+  // await dancing_browser(false, 2);
+  stage.css("width", "375px");
+  await pause(4000);
+  stage.css("width", "1000px");
+  await pause(4000);
   update_intro("And responsive fluid design.");
   await pause(1000);
   browser_content.attr("src", "https://q835771840.github.io/Newsweek/");
   await pause(1500);
-  await dancing_browser(false, 2);
-  await pause(1000);
+  stage.css("width", "375px");
+  await pause(4000);
+  stage.css("width", "1000px");
+  await pause(5000);
   update_intro("I also know a little bit of UI design, like tear down design.");
   await pause(1500);
   browser_content.attr("src", "https://q835771840.github.io/Teardown-Design/");
@@ -85,26 +91,6 @@ async function walk_through() {
 
   function rotate_browser() {
     $(".flip-card-inner").css("transform", "rotateY(180deg)");
-  }
-
-  //make browser dance
-  function dancing_browser(grow, sec) {
-    return new Promise(resolve => {
-      let w = stage.width();
-      let inte = setInterval(() => {
-        change_width(stage, w);
-        if (grow && w > 1200) {
-          clearInterval(inte);
-          resolve(1);
-        } else if (!grow && w < 375) {
-          grow = true;
-        }
-        grow ? (w += sec) : (w -= sec);
-      }, 1);
-    });
-    function change_width(ele, width) {
-      ele.width(width + "px");
-    }
   }
 }
 

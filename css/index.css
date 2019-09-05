@@ -113,6 +113,8 @@ header #intro {
           perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
   display: none;
+  -webkit-transition: width 4s;
+  transition: width 4s;
 }
 
 /* This container is needed to position the front and back side */
