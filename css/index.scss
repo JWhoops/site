@@ -39,50 +39,15 @@ header {
 }
 
 #start_button {
-  margin: 0 auto;
   margin-top: 50px;
   font-size: 20px;
-  cursor: pointer;
-  width: 300px;
-  height: 80px;
-  background-color: #fca103;
-  position: relative;
-  z-index: 0;
+  padding: 20px;
   border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  padding-top: 35px;
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -2;
-    left: -50%;
-    top: -50%;
-    width: 200%;
-    height: 200%;
-    background-color: #399953;
-    background-repeat: no-repeat;
-    background-size: 50% 50%, 50% 50%;
-    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    background-image: linear-gradient(#399953, #399953),
-      linear-gradient(#fbb300, #fbb300), linear-gradient(#d53e33, #d53e33),
-      linear-gradient(#377af5, #377af5);
-    animation: rotate 4s linear infinite;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    left: 6px;
-    top: 6px;
-    width: calc(100% - 12px);
-    height: calc(100% - 12px);
-    background: white;
-    border-radius: 5px;
-  }
 }
 
+#stage {
+  border: none;
+}
 .flip-card {
   margin: 0 auto;
   background-color: transparent;
@@ -91,7 +56,6 @@ header {
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   display: none;
-  transition: width 4s;
 }
 
 /* This container is needed to position the front and back side */
@@ -115,8 +79,11 @@ header {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: whitesmoke;
+  border: none;
   #browser {
+    transition: width 3.5s;
+    width: 100%;
+    margin: 0 auto;
     #browser_header {
       #brower_icon_container {
         height: 20px;
@@ -147,25 +114,36 @@ header {
 
 /* Style the back side */
 .flip-card-back {
-  background-color: white;
   transform: rotateY(180deg);
-  .column {
-    .card {
-      color: #4183c4;
-      box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      margin-top: 18px;
+  background: white;
+  #back-container {
+    width: 100%;
+    height: 100%;
+    #card-container {
       width: 100%;
-      padding-top: 13px;
-      height: 50px;
-      background: white;
-      img {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        left: 10px;
-        vertical-align: text-bottom;
-        margin-left: 8px;
+      margin: 0 auto;
+      .card {
+        border: 8px double grey;
+        width: 100%;
+        .header {
+          font-size: 28px;
+        }
+        .description {
+          font-size: 15px;
+        }
+        #tech-stack {
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        #skill-button {
+          color: black;
+          background: white;
+          &:hover {
+            background: black;
+            color: white;
+          }
+        }
       }
     }
   }
