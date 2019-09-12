@@ -32,6 +32,7 @@ position for 2020<br> Check my <a target="_blank" href="./meta/Josiah_Wu.pdf">Re
 }
 
 load_intro();
+
 async function walk_through() {
   let stage = $("#stage");
   let browser = $("#browser");
@@ -66,6 +67,7 @@ async function walk_through() {
   );
   browser_back.append(get_all_skills());
   browser_back.css("width", "630px");
+  $("#browser_header").remove();
   rotate_browser();
 
   // utility function
