@@ -6,7 +6,8 @@ A senior student in University of Wisconsin - Madison <br>
 That's right, I am a badger engineer 🦡<br>
 I like coding, learning, and running.<br>Current Status:
 <br> Actively looking for a full time software engineering
-position for 2020<br> Check my <a target="_blank" href="./meta/Josiah_Wu.pdf">Resume</a> for contact info.😄
+position for 2020<br> Check my <a style="color:blue;" 
+target="_blank" href="./meta/Josiah_Wu.pdf">Resume</a> for contact info.😄
 "`,
     i = 0,
     isTag,
