@@ -30,6 +30,10 @@ target="_blank" href="./meta/Josiah_Wu.pdf">Resume</a> for contact info.😄
     walk_through();
     stop = true;
   });
+  // wake server
+  $.get(
+    "https://q835771840.github.io/Madmap/views/result.html?sValue=Microwave"
+  );
 }
 
 load_intro();
